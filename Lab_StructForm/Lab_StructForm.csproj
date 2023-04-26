@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2F1F26E-7DF7-4007-93C2-FC43D8E79CA6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Lab_StructForm</RootNamespace>
+    <AssemblyName>Lab_StructForm</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Frm_Struct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Struct.Designer.cs">
+      <DependentUpon>Frm_Struct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="homework.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="homework.Designer.cs">
+      <DependentUpon>homework.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_Struct.resx">
+      <DependentUpon>Frm_Struct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="homework.resx">
+      <DependentUpon>homework.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Frm_Clac\Frm_Clac.csproj">
+      <Project>{38799903-2EAF-44A5-A8F8-46BD8309F843}</Project>
+      <Name>Frm_Clac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frm_Hello\Frm_Hello.csproj">
+      <Project>{22FED702-5980-47DC-A905-7A3B03C23D42}</Project>
+      <Name>Frm_Hello</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frm_Loan\Frm_Loan.csproj">
+      <Project>{87724DC1-8FCB-441F-A317-E3153D080201}</Project>
+      <Name>Frm_Loan</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frm_Picture viewer\Frm_Picture viewer.csproj">
+      <Project>{54b7131e-6ac2-437b-adc6-aecf5e9ef093}</Project>
+      <Name>Frm_Picture viewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frm_StudentGrade\Frm_StudentGrade.csproj">
+      <Project>{933fedcb-c245-48eb-856e-e30b890c4d95}</Project>
+      <Name>Frm_StudentGrade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab screen\Lab screen.csproj">
+      <Project>{F7AE9F8A-2728-40A6-856E-606C41A54038}</Project>
+      <Name>Lab screen</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab_Alarm\Lab_Alarm.csproj">
+      <Project>{119A9157-81FF-4A08-829F-7E0B5E04E12B}</Project>
+      <Name>Lab_Alarm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab_Guess\Lab_Guess.csproj">
+      <Project>{77074B14-9610-457E-B84B-8105B37BDB74}</Project>
+      <Name>Lab_Guess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab_Method\Lab_ForDoWhile.csproj">
+      <Project>{DECE4E39-C5FB-4C4D-B9A3-2E679574105A}</Project>
+      <Name>Lab_ForDoWhile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab_Note\Frm_Note.csproj">
+      <Project>{DACD0FAE-8EC9-44D9-89B6-005B9DED7113}</Project>
+      <Name>Frm_Note</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab_Picturedrawer\Lab_Picturedrawer.csproj">
+      <Project>{E8B07AEE-9AD1-49B7-AA21-DD21AAF47ECE}</Project>
+      <Name>Lab_Picturedrawer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab_PosPos\Lab_PosPos.csproj">
+      <Project>{46dcdbf7-7a11-43a6-8f77-63f90dd1f61a}</Project>
+      <Name>Lab_PosPos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab_studentgrade_list\Lab_studentgrade_list.csproj">
+      <Project>{CCFE03E5-8410-47F1-B0BE-6D4782D8F7DF}</Project>
+      <Name>Lab_studentgrade_list</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab_XOGAME\Lab_XOGAME.csproj">
+      <Project>{D719CD36-9229-4D93-A814-D7305F7833D0}</Project>
+      <Name>Lab_XOGAME</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
